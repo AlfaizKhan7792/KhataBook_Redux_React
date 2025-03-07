@@ -2,20 +2,20 @@ import React, { useEffect } from 'react'
 import Left from '../components/Left'
 import Right from '../components/Right'
 import { Box, Grid, Typography } from '@mui/material'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 // import { useNavigate } from 'react-router-dom'
-import Loading from '../components/Loading'
+// import Loading from '../components/Loading'
 
 const Home = () => {
-   const {user , isLoading}= useSelector((state)=> state.kbauth)
+  //  const {user , isLoading}= useSelector((state)=> state.kbauth)
 
   //  const navigate = useNavigate()
 
-   if(isLoading){
-    return(
-      <Loading />
-    )
-   }
+  //  if(isLoading){
+  //   return(
+  //     <Loading />
+  //   )
+  //  }
 
 //     useEffect(() =>{
 // if (!user) {

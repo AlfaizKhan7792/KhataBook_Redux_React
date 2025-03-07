@@ -34,12 +34,12 @@ const Navbar = () => {
    
         {/* {
           !user ? <>
-          </> : */}
+          </> :
           <> 
            <Typography variant='h6' fontWeight={500} align='center' sx={{color : 'black' , marginRight : '10px'}}>Hello : {user?.name}</Typography>
            <Button type='submit' onClick={handleSubmit} title='LogOut' variant='contained' color='error' ><LogoutIcon /></Button></>
-        {/* } */}
-         
+         } 
+          */}
         </Box>
         </Toolbar>
        </Container>
