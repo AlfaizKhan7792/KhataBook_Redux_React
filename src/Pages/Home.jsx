@@ -3,13 +3,13 @@ import Left from '../components/Left'
 import Right from '../components/Right'
 import { Box, Grid, Typography } from '@mui/material'
 import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import Loading from '../components/Loading'
 
 const Home = () => {
    const {user , isLoading}= useSelector((state)=> state.kbauth)
 
-   const navigate = useNavigate()
+  //  const navigate = useNavigate()
 
    if(isLoading){
     return(
@@ -17,11 +17,11 @@ const Home = () => {
     )
    }
 
-    useEffect(() =>{
-if (!user) {
-    navigate("/login")
-}
-    } , [user])
+//     useEffect(() =>{
+// if (!user) {
+//     navigate("/login")
+// }
+//     } , [user])
 
    return (
     <>
