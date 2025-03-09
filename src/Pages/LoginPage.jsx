@@ -13,12 +13,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../Features/auth/AuthSlice';
+import Loading from '../components/Loading';
 
 const theme = createTheme();
 
 const LoginPage = () => {
 
-    const {user} = useSelector((state) => state.kbauth)
+    const {user , isLoading} = useSelector((state) => state.kbauth)
 
     const dispatch = useDispatch()
 
@@ -41,13 +42,15 @@ const LoginPage = () => {
 
     const navigate = useNavigate()
 
-
-
     useEffect(() => {
         if(user){
             navigate('/')
         }
     }, [user]);
+
+    if(isLoading){
+      return <Loading />
+    }
  
   return (
     <ThemeProvider theme={theme}>

@@ -6,7 +6,7 @@ import { Box, List } from '@mui/material'
 const ListGroup = () => {
 
     const {AllTransactions} = useSelector((state) => state.KhataBook)
-    console.log(AllTransactions);
+    // console.log(AllTransactions);
 
   return (
     <>
